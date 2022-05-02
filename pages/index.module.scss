@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.counter {
+    .count {
+        background-color: white;
+        color: black;
+        font-size: 30px;
+        width: 100px;
+        padding: 10px;
+        margin-bottom: 10px;
+
+    }
+} 
+
+.button {
+    font-size: 30px;
+    padding: 10px;
+    width: 100px;
+    background-color: rgb(32, 112, 99);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.resetButton {
+    font-size: 20px;
+}

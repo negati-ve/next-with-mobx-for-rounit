@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import Head from "next/head";
 import styles from "./index.module.scss";
-import { observer } from "mobx";
+import { observer } from "mobx-react";
 import store from "./store";
 @observer
 class Counter extends Component {

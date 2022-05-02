@@ -1,8 +1,10 @@
 //import { useState } from 'react';
+import React from 'react';
 import Head from "next/head";
 import styles from "./index.module.scss";
 import { observer } from "mobx";
 import store from "./store";
+@observer
 
 const Counter = () => {
   //const [count, setCount] = useState(0);

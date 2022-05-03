@@ -1,7 +1,16 @@
-import { observable } from "mobx";
+import { action, makeObservable, observable } from "mobx";
 
 class CounterStore {
-  @observable counter = 0;
+  counter = 0;
+
+  constructor() {
+    makeObservable(this, {
+      counter: observable,
+      increment: action,
+      decrement: action,
+      reset: action,
+    });
+  }
 
   increment() {
     this.counter++;

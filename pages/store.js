@@ -1,4 +1,5 @@
 import { action, makeObservable, observable } from "mobx";
+import { createContext } from "react";
 
 class CounterStore {
   counter = 0;
@@ -25,4 +26,4 @@ class CounterStore {
   }
 }
 
-export default new CounterStore();
+export const CounterStoreContext = createContext(new CounterStore());

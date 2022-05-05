@@ -4,7 +4,7 @@ import axios from "axios";
 import { createContext } from "react";
 
 class Data {
-  data = [];
+  data = {};
 
   constructor() {
     makeObservable(this, {
@@ -18,7 +18,10 @@ class Data {
     const obj = res.data;
     let num = Math.floor(Math.random() * 200);
     this.data = obj[num];
-    console.log(toJS(this.data));
+    let temp = { ...toJS(this.data) };
+    console.log(temp);
+    //console.log(this.data);
+    // console.log(toJS(this.data));
     // this.data = Object.assign({}, obj[num]);
     // for (let i = 0; i < obj.length; i++) {
     //   let num = Math.floor(Math.random() * 200);

@@ -16,8 +16,9 @@ class Data {
     const res = await axios("https://jsonplaceholder.typicode.com/todos");
     const obj = res.data;
     let num = Math.floor(Math.random() * 200);
-    // this.data = Object.assign({}, obj[num]);
     this.data = obj[num];
+    console.log(this.data);
+    // this.data = Object.assign({}, obj[num]);
     // for (let i = 0; i < obj.length; i++) {
     //   let num = Math.floor(Math.random() * 200);
     //   this.data = Object.assign({}, obj[num]);

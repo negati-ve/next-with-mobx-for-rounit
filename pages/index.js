@@ -11,7 +11,7 @@ const Data = observer(() => {
 
   return (
     <div className={styles.counter}>
-      {console.log(dataStore.data)}
+      {console.log(dataStore.getData())}
       {/* <div className={styles.button} onClick={() => counterStore.decrement()}>
         -
       </div> */}

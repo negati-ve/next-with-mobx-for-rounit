@@ -14,11 +14,12 @@ class Data {
 
   async getData() {
     const res = await axios("https://jsonplaceholder.typicode.com/todos");
-    const obj = res.json();
+    const obj = res.data;
     for (let i = 0; i < obj.length; i++) {
       let num = Math.floor(Math.random() * 200);
-      data = Object.assign({}, obj[num]);
+      this.data = Object.assign({}, obj[num]);
     }
+    // console.log(obj);
   }
 }
 

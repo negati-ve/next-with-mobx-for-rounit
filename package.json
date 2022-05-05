@@ -9,12 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "mobx": "^6.5.0",
+    "mobx-react": "^7.1.0",
     "next": "12.1.5",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "sass": "^1.51.0",
-    "mobx-react": "^7.1.0"
+    "sass": "^1.51.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.16.7",

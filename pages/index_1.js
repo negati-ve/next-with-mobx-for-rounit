@@ -3,29 +3,27 @@ import React, { useContext } from "react";
 import Head from "next/head";
 import styles from "./index.module.scss";
 import { observer } from "mobx-react";
-import store1 from "./stores/store1";
-import { DataContext } from "./stores/store1";
+import store from "./store";
+import { CounterStoreContext } from "./store";
 
-const Data = observer(() => {
-  const dataStore = useContext(DataContext);
+const Counter = observer(() => {
+  const counterStore = useContext(CounterStoreContext);
 
   return (
     <div className={styles.counter}>
-      {console.log(dataStore.data)}
-      {/* <div className={styles.button} onClick={() => counterStore.decrement()}>
+      <div className={styles.button} onClick={() => counterStore.decrement()}>
         -
-      </div> */}
-
-      {/* <div className={styles.count}>{dataStore.data}</div> */}
-      {/* <div className={styles.button} onClick={() => counterStore.increment()}>
+      </div>
+      <div className={styles.count}>{counterStore.counter}</div>
+      <div className={styles.button} onClick={() => counterStore.increment()}>
         +
-      </div> */}
-      {/* <div
+      </div>
+      <div
         className={`${styles.button} ${styles.resetButton}`}
         onClick={() => counterStore.reset()}
       >
         Reset
-      </div> */}
+      </div>
     </div>
   );
 });
@@ -39,7 +37,7 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Data />
+      <Counter />
     </div>
   );
 };
